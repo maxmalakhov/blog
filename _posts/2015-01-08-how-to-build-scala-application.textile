@@ -1,0 +1,10 @@
+---
+layout: post
+title: How to build a scala application
+---
+
+h1. {{ page.title }}
+
+When you start to learn new language or new technology you could not do regular things such as compiling, building or creating executable file.
+
+p(meta). 08 Jan 2015
