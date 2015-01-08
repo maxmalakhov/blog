@@ -2,6 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
 <head>
    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+   <meta name="viewport" content="width=640">
    <title>{{ page.title }}</title>
    <meta name="author" content="Max Malakhov" />
    <link href="http://feeds.feedburner.com/maxmalakhov" rel="alternate" title="Max Malakhov" type="application/atom+xml" />
@@ -16,66 +17,90 @@
    <!-- Typekit -->
    <script type="text/javascript" src="http://use.typekit.com/jpd0pfm.js"></script>
    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
+  <link rel="stylesheet" href="stylesheets/core.css" media="screen">
+  <link rel="stylesheet" href="stylesheets/mobile.css" media="handheld, only screen and (max-device-width:640px)">
+  <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+
+  <script type="text/javascript" src="javascripts/modernizr.js"></script>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <script type="text/javascript" src="javascripts/headsmart.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function () {
+      $('#main_content').headsmart()
+    })
+  </script>
 </head>
 <body>
+    <a id="forkme_banner" href="https://github.com/maxmalakhov/">View on GitHub</a>
+    <div class="shell">
 
-<!-- ClickTale Top part -->
-<script type="text/javascript">
-var WRInitTime=(new Date()).getTime();
-</script>
-<!-- ClickTale end of Top part -->
+      <!-- ClickTale Top part -->
+      <script type="text/javascript">
+      var WRInitTime=(new Date()).getTime();
+      </script>
+      <!-- ClickTale end of Top part -->
 
-<div class="site">
-  <div class="title">
-    <a href="/">MobiHabi Mobile Software</a>
-    <a class="extra" href="/">home</a>
-  </div>
+      <header>
+        <span class="ribbon-outer">
+          <span class="ribbon-inner">
+            <h1>Mobihabi blog</h1>
+            <h2>MobiHabi Blog</h2>
+          </span>
+          <span class="left-tail"></span>
+          <span class="right-tail"></span>
+        </span>
+      </header>
+
+      <section id="downloads">
+        <span class="inner">
+<!--           <a href="https://github.com/maxmalakhov/mobihabi_blog/zipball/master" class="zip"><em>download</em> .ZIP</a><a href="https://github.com/maxmalakhov/mobihabi_blog/tarball/master" class="tgz"><em>download</em> .TGZ</a> -->
+        </span>
+      </section>
+
+      <span class="banner-fix"></span>
+
+      <section id="main_content">
   
-  {{ content }}
+        {{ content }}
   
-  <div class="footer">
-    <div class="contact">
-      <p>
-        Max Malakhov<br />
-      </p>
-    </div>
-    <div class="contact">
-      <p>
-        <a href="http://mobihabi.com">mobihabi</a><br />
-        <a href="http://twitter.com/maxalakov/">twitter.com/maxmalakhov</a><br />
-      </p>
-    </div>
-    <div class="rss">
-      <a href="http://feeds.feedburner.com/maxmalakhov">
-        <img src="/images/rss.png" alt="Subscribe to RSS Feed" />
-      </a>
-    </div>
-  </div>
-</div>
+      </section>
 
-<!-- <a href="http://github.com/mojombo"><img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png" alt="Fork me on GitHub" /></a> -->
+      <footer>
+        <span class="ribbon-outer">
+          <span class="ribbon-inner">
+            <p>this project by <a href="https://github.com/maxmalakhov">maxmalakhov</a> can be found on <a href="https://github.com/maxmalakhov/mobihabi_blog">GitHub</a></p>
+          </span>
+          <span class="left-tail"></span>
+          <span class="right-tail"></span>
+        </span>
+        <p>Generated with <a href="http://pages.github.com">GitHub Pages</a> using Merlot</p>
+        <span class="octocat"></span>
+      </footer>
 
-<!-- ClickTale Bottom part -->
-<div id="ClickTaleDiv" style="display: none;"></div>
-<script type="text/javascript">
-if(document.location.protocol!='https:')
-  document.write(unescape("%3Cscript%20src='http://s.clicktale.net/WRb.js'%20type='text/javascript'%3E%3C/script%3E"));
-</script>
-<script type="text/javascript">
-if(typeof ClickTale=='function') ClickTale(206,0.3,"www03");
-</script>
-<!-- ClickTale end of Bottom part -->
+  <!-- <a href="http://github.com/mojombo"><img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png" alt="Fork me on GitHub" /></a> -->
 
-<!-- Google Analytics -->
-<script type="text/javascript">
-// var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-// document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-</script>
-<script type="text/javascript">
-// var pageTracker = _gat._getTracker("UA-6016902-1");
-// pageTracker._trackPageview();
-</script>
-<!-- Google Analytics end -->
+  <!-- ClickTale Bottom part -->
+  <div id="ClickTaleDiv" style="display: none;"></div>
+  <script type="text/javascript">
+  if(document.location.protocol!='https:')
+    document.write(unescape("%3Cscript%20src='http://s.clicktale.net/WRb.js'%20type='text/javascript'%3E%3C/script%3E"));
+  </script>
+  <script type="text/javascript">
+  if(typeof ClickTale=='function') ClickTale(206,0.3,"www03");
+  </script>
+  <!-- ClickTale end of Bottom part -->
 
+  <!-- Google Analytics -->
+  <script type="text/javascript">
+  // var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+  // document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+  </script>
+  <script type="text/javascript">
+  // var pageTracker = _gat._getTracker("UA-6016902-1");
+  // pageTracker._trackPageview();
+  </script>
+  <!-- Google Analytics end -->
+</div> <!-- shell-->
 </body>
 </html>
