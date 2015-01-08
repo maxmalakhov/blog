@@ -1,0 +1,8 @@
+---
+layout: post
+title: How to build a scala application
+---
+
+h1. {{ page.title }}
+
+p(meta). 08 Jan 2015
