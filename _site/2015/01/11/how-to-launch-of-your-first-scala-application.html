@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+
+<head>
+   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+   <meta name="viewport" content="width=640">
+   <title>How to launch of your first Scala application</title>
+   <meta name="author" content="Max Malakhov" />
+   <link href="http://feeds.feedburner.com/maxmalakhov" rel="alternate" title="Max Malakhov" type="application/atom+xml" />
+<!--    <meta name="readability-verification" content="QCzSs992GxmRYRKVpPeZ6LE2tS8aYKxsSSQKV8YM"/> -->
+
+   <!-- syntax highlighting CSS -->
+   <!-- <link rel="stylesheet" href="/css/syntax.css" type="text/css" /> -->
+
+   <!-- Homepage CSS -->
+   <!-- <link rel="stylesheet" href="/css/screen.css" type="text/css" media="screen, projection" /> -->
+
+   <!-- Typekit -->
+   <!-- <script type="text/javascript" src="http://use.typekit.com/jpd0pfm.js"></script> -->
+   <!-- script type="text/javascript">try{Typekit.load();}catch(e){}</script> -->
+
+  <link rel="stylesheet" href="/stylesheets/core.css" media="screen">
+  <link rel="stylesheet" href="/stylesheets/mobile.css" media="handheld, only screen and (max-device-width:640px)">
+  <link rel="stylesheet" href="/stylesheets/pygment_trac.css">
+
+  <script type="text/javascript" src="/javascripts/modernizr.js"></script>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <script type="text/javascript" src="/javascripts/headsmart.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function () {
+      $('#main_content').headsmart()
+    })
+  </script>
+</head>
+
+<body>
+
+<!-- <body> -->
+
+<a id="forkme_banner" href="https://github.com/maxmalakhov/">View on GitHub</a>
+<div class="shell">
+
+      <!-- ClickTale Top part -->
+      <script type="text/javascript">
+      // var WRInitTime=(new Date()).getTime();
+      </script>
+      <!-- ClickTale end of Top part -->
+
+      <header>
+        <span class="ribbon-outer">
+          <span class="ribbon-inner">
+            <h1>Mobihabi blog</h1>
+            <h2>MobiHabi Blog</h2>
+          </span>
+          <span class="left-tail"></span>
+          <span class="right-tail"></span>
+        </span>
+      </header>
+
+      <section id="downloads">
+        <span class="inner">
+          <a href="/" class="zip">Home</a>
+          <a href="//mobihabi.com" class="tgz">Main</a>
+        </span>
+      </section>
+
+      <span class="banner-fix"></span>
+
+      <section id="main_content">
+  
+        <div id="post">
+    <h1>How to launch of your first Scala application</h1>
+<p class="meta">08 Jan 2015</p>
+<p>When you start to learn a new language or a new technology you probably don&#8217;t know yet how to build and launch your first app easily.</p>
+<p>First of all, we need to have Scala installed on our machine:</p>
+<p><code>$ brew install scala</code></p>
+<p>We can check it with:</p>
+<p><code>$ scala</code></p>
+<p>It&#8217;ll display the version of the installed <span class="caps">JVM</span> too:</p>
+<blockquote>
+<p>Welcome to Scala version 2.11.4 (Java HotSpot&#8482; 64-Bit Server VM, Java 1.7.0_71).</p>
+</blockquote>
+<p>And we need to have <span class="caps">SBT</span> installed also</p>
+<p><code>$ brew install sbt</code></p>
+<p>Let&#8217;s check it with:</p>
+<p><code>$ sbt about</code></p>
+<blockquote>
+<p>[info] This is sbt 0.13.7<br />
+[info] The current project is built against Scala 2.10.4</p>
+</blockquote>
+<p>The next step is we should declare the <strong>assembly</strong> plugin in our project in the <em>project/plugins.sbt</em> file.</p>
+<p><code>addSbtPlugin("com.eed3si9n" % "sbt-assembly" % "0.12.0")</code></p>
+<p>Afterward, in order to have a standalone runnable file we can start the <strong>assembly</strong> command:</p>
+<p><code>$ sbt assembly</code></p>
+<blockquote>
+<p>[info] Updating {file:/ &#8230;<br />
+[info] Resolving jline#jline;2.12 &#8230;<br />
+[info] Compiling 5 Scala sources to /<br />
+[info] Packaging /<br />
+[success] Total time: 35 s, completed</p>
+</blockquote>
+<p>We&#8217;ll get a fat jar file with all dependencies included.<br />
+Let&#8217;s ran it with:</p>
+<p><code>$ java -jar our_first_scala_app-assembly-0.1.jar</code></p>
+<p>Have a great day!</p>
+</div>
+<div id="links">
+	<strong>links: </strong>
+    
+      <a href="http://en.wikipedia.org/wiki/Scala_(programming_language)" target="_blank">Scala</a>
+    
+      <a href="http://en.wikipedia.org/wiki/SBT_(software)" target="_blank">SBT</a>
+    
+      <a href="https://github.com/sbt/sbt-assembly" target="_blank">Assembly plugin</a>
+    
+</div>
+<div id="tags">
+	<strong>tags: </strong>
+    
+      <span>scala</span>
+    
+      <span>sbt</span>
+    
+</div>
+</br>
+<div id="related">
+  <h2>Related Posts</h2>
+  <ul class="posts">
+    
+  </ul>
+</div>
+  
+      </section>
+
+      <footer>
+        <span class="ribbon-outer">
+          <span class="ribbon-inner">
+            <p>this project by <a href="https://github.com/maxmalakhov">maxmalakhov</a> can be found on <a href="https://github.com/maxmalakhov/mobihabi_blog">GitHub</a></p>
+          </span>
+          <span class="left-tail"></span>
+          <span class="right-tail"></span>
+        </span>
+        <p>Generated with <a href="http://pages.github.com">GitHub Pages</a> using Merlot</p>
+        <span class="octocat"></span>
+      </footer>
+
+</div> <!-- shell-->
+
+<!-- <body> -->
+
+  <!-- <a href="http://github.com/mojombo"><img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png" alt="Fork me on GitHub" /></a> -->
+
+  <!-- ClickTale Bottom part -->
+  <div id="ClickTaleDiv" style="display: none;"></div>
+  <script type="text/javascript">
+  // if(document.location.protocol!='https:')
+  //   document.write(unescape("%3Cscript%20src='http://s.clicktale.net/WRb.js'%20type='text/javascript'%3E%3C/script%3E"));
+  </script>
+  <script type="text/javascript">
+  // if(typeof ClickTale=='function') ClickTale(206,0.3,"www03");
+  </script>
+  <!-- ClickTale end of Bottom part -->
+
+  <!-- Google Analytics -->
+  <script type="text/javascript">
+  // var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+  // document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+  </script>
+  <script type="text/javascript">
+  // var pageTracker = _gat._getTracker("UA-6016902-1");
+  // pageTracker._trackPageview();
+  </script>
+  <!-- Google Analytics end -->
+
+<!-- </body> -->
+</html>

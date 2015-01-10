@@ -1,7 +1,7 @@
 ---
 layout: post
-title: How to build a scala application
-tags: [scala]
+title: How to launch of the first application
+tags: [scala, sbt]
 ---
 
 h1. {{ page.title }}

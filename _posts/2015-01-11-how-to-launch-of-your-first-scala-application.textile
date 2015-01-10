@@ -1,0 +1,68 @@
+---
+layout: post
+title: How to launch of your first Scala application
+tags: [ scala, sbt ]
+links: [{ name: "Scala", 
+          href: "http://en.wikipedia.org/wiki/Scala_(programming_language)"
+        },{
+          name: "SBT",
+          href: "http://en.wikipedia.org/wiki/SBT_(software)"
+        },{
+          name: "Assembly plugin",
+          href: "https://github.com/sbt/sbt-assembly"
+        }
+       ] 
+---
+
+h1. {{ page.title }}
+
+p(meta). 08 Jan 2015
+
+When you start to learn a new language or a new technology you probably don't know yet how to build and launch your first app easily. 
+
+First of all, we need to have Scala installed on our machine:
+
+@$ brew install scala@
+
+We can check it with:
+
+@$ scala@
+
+It'll display the version of the installed JVM too:
+
+bq. 
+Welcome to Scala version 2.11.4 (Java HotSpot(TM) 64-Bit Server VM, Java 1.7.0_71).
+
+And we need to have SBT installed also
+
+@$ brew install sbt@
+
+Let's check it with:
+
+@$ sbt about@
+
+bq. 
+[info] This is sbt 0.13.7
+[info] The current project is built against Scala 2.10.4
+
+The next step is we should declare the *assembly* plugin in our project in the _project/plugins.sbt_ file.
+
+@addSbtPlugin("com.eed3si9n" % "sbt-assembly" % "0.12.0")@  
+
+Afterward, in order to have a standalone runnable file we can start the *assembly* command:
+
+@$ sbt assembly@
+
+bq. 
+[info] Updating {file:/ ...
+[info] Resolving jline#jline;2.12 ...
+[info] Compiling 5 Scala sources to /
+[info] Packaging /
+[success] Total time: 35 s, completed
+
+We'll get a fat jar file with all dependencies included.
+Let's ran it with:
+
+@$ java -jar our_first_scala_app-assembly-0.1.jar@
+
+Have a great day!

@@ -5,10 +5,19 @@ layout: default
 <div id="post">
     {{ content }}
 </div>
-<div id="tags">
-	{{ page.tags }}
+<div id="links">
+	<strong>links: </strong>
+    {% for link in page.links %}
+      <a href="{{ link.href }}" target="_blank">{{ link.name }}</a>
+    {% endfor %}
 </div>
-
+<div id="tags">
+	<strong>tags: </strong>
+    {% for tag in page.tags %}
+      <span>{{ tag }}</span>
+    {% endfor %}
+</div>
+</br>
 <div id="related">
   <h2>Related Posts</h2>
   <ul class="posts">
