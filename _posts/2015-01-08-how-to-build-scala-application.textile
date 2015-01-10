@@ -1,6 +1,7 @@
 ---
 layout: post
 title: How to build a scala application
+tag: scala
 ---
 
 h1. {{ page.title }}
