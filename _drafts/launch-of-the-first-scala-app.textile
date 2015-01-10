@@ -1,0 +1,13 @@
+---
+layout: post
+title: How to build a scala application
+tags: [scala]
+---
+
+h1. {{ page.title }}
+
+p(meta). 08 Jan 2015
+
+When you start to learn new language or new technology you probably don't know yet how to build and launch your code.
+
+fgh sdfh abbout 
