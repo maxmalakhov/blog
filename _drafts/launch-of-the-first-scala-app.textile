@@ -8,6 +8,25 @@ h1. {{ page.title }}
 
 p(meta). 08 Jan 2015
 
-When you start to learn new language or new technology you probably don't know yet how to build and launch your code.
+When you start to learn new language or new technology you probably don't know yet how to build and launch your first app. 
 
-fgh sdfh abbout 
+@$ brew install scala@
+
+@$ scala@
+bq.
+Welcome to Scala version 2.11.4 (Java HotSpot(TM) 64-Bit Server VM, Java 1.7.0_71).
+
+@$ brew install sbt@
+
+@$ sbt assembly@
+bq.
+[info] Updating {file:/ ...
+[info] Resolving jline#jline;2.12 ...
+[info] Compiling 5 Scala sources to /
+[info] Packaging /
+[success] Total time: 35 s, completed
+ 
+
+
+ href SBT - http://en.wikipedia.org/wiki/SBT_(software)
+ href Scala - http://en.wikipedia.org/wiki/Scala_(programming_language)
